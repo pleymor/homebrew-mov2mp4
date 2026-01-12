@@ -1,6 +1,6 @@
 class Mov2mp4 < Formula
   desc "Convert .mov files to lightweight .mp4"
-  homepage "https://github.com/pleymor/mov2mp4"
+  homepage "https://github.com/pleymor/homebrew-mov2mp4"
   url "https://registry.npmjs.org/mov2mp4/-/mov2mp4-1.0.0.tgz"
   sha256 "eb28c5820a18bd780b2844fc9916ef583fd6f6f4d56772d7378bfacfde1b67d5"
   license "MIT"

@@ -28,7 +28,8 @@ sudo port install ffmpeg
 ### Homebrew (recommended for macOS)
 
 ```bash
-brew install pleymor/mov2mp4/mov2mp4
+brew tap pleymor/mov2mp4
+brew install mov2mp4
 ```
 
 This automatically installs ffmpeg as a dependency.

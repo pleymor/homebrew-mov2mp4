@@ -59,12 +59,12 @@
   - install block using std_npm_args
   - test block verifying --help and --version
 - [x] T011 [US1] Update SHA256 in Formula/mov2mp4.rb after npm publish
-- [ ] T012 [US1] Test formula locally with `brew install --build-from-source ./Formula/mov2mp4.rb`
-- [ ] T013 [US1] Run `brew test mov2mp4` to verify test block passes
-- [ ] T014 [US1] Run `brew audit --formula ./Formula/mov2mp4.rb` to verify formula passes audit
-- [ ] T015 [US1] Commit and push formula to mov2mp4 repository
-- [ ] T016 [US1] Test installation: `brew install pleymor/mov2mp4/mov2mp4`
-- [ ] T017 [US1] Verify `mov2mp4 --version` shows correct version
+- [x] T012 [US1] Test formula locally with `brew install --build-from-source ./Formula/mov2mp4.rb`
+- [x] T013 [US1] Run `brew test mov2mp4` to verify test block passes
+- [x] T014 [US1] Run `brew audit --formula ./Formula/mov2mp4.rb` to verify formula passes audit
+- [x] T015 [US1] Commit and push formula to mov2mp4 repository
+- [x] T016 [US1] Test installation: `brew tap pleymor/mov2mp4 && brew install mov2mp4`
+- [x] T017 [US1] Verify `mov2mp4 --version` shows correct version
 - [ ] T018 [US1] Verify `mov2mp4 --help` displays help text
 
 **Checkpoint**: Users can install mov2mp4 via Homebrew. MVP complete.
