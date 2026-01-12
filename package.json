@@ -25,6 +25,14 @@
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pleymor/mov2mp4.git"
+  },
+  "homepage": "https://github.com/pleymor/mov2mp4#readme",
+  "bugs": {
+    "url": "https://github.com/pleymor/mov2mp4/issues"
+  },
   "engines": {
     "node": ">=20.0.0"
   },
