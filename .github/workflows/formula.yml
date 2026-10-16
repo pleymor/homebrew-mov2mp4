@@ -1,0 +1,40 @@
+name: Formula
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Formula/**"
+      - ".github/workflows/formula.yml"
+  pull_request:
+    paths:
+      - "Formula/**"
+      - ".github/workflows/formula.yml"
+  workflow_dispatch:
+
+jobs:
+  formula:
+    strategy:
+      fail-fast: false
+      matrix:
+        # Apple Silicon on every change. Intel only on manual dispatch: it is
+        # Homebrew Tier 3 (no new bottles), so ffmpeg builds from source there.
+        os: ${{ github.event_name == 'workflow_dispatch' && fromJSON('["macos-15", "macos-15-intel"]') || fromJSON('["macos-15"]') }}
+    runs-on: ${{ matrix.os }}
+    steps:
+      # Taps this repository as pleymor/mov2mp4 at the checked-out commit
+      - uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Audit
+        run: brew audit --strict --online --formula pleymor/mov2mp4/mov2mp4
+
+      - name: Install
+        run: brew install --build-from-source pleymor/mov2mp4/mov2mp4
+
+      - name: Test
+        run: brew test pleymor/mov2mp4/mov2mp4
+
+      - name: Smoke test
+        run: |
+          mov2mp4 --version
+          mov2mp4 --help
