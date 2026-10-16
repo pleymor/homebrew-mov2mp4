@@ -79,7 +79,7 @@
 
 ### Implementation for User Story 2
 
-- [ ] T019 [US2] Document version update process in README.md (already done - Homebrew section exists)
+- [x] T019 [US2] Document version update process in README.md (already done - Homebrew section exists)
 
 **Checkpoint**: Update workflow documented. Users can upgrade when new versions are released.
 

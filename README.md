@@ -33,6 +33,12 @@ brew install pleymor/mov2mp4/mov2mp4
 
 This automatically installs ffmpeg as a dependency.
 
+To update to the latest version:
+
+```bash
+brew update && brew upgrade mov2mp4
+```
+
 ### npm
 
 ```bash
@@ -99,6 +105,17 @@ Conversion complete!
   New size: 42.1 MB
   Compression: 92% reduction
 ```
+
+## Releasing
+
+This repository is also the Homebrew tap (`Formula/mov2mp4.rb`). To ship a new version:
+
+1. Bump `version` in `package.json` and run `npm publish`.
+2. In `Formula/mov2mp4.rb`, point `url` at the new tarball and update `sha256`:
+   ```bash
+   curl -sL https://registry.npmjs.org/mov2mp4/-/mov2mp4-<version>.tgz | shasum -a 256
+   ```
+3. Open a pull request. The Formula workflow audits, installs and tests the formula on Apple Silicon and Intel macOS.
 
 ## License
 
