@@ -115,7 +115,7 @@ This repository is also the Homebrew tap (`Formula/mov2mp4.rb`). To ship a new v
    ```bash
    curl -sL https://registry.npmjs.org/mov2mp4/-/mov2mp4-<version>.tgz | shasum -a 256
    ```
-3. Open a pull request. The Formula workflow audits, installs and tests the formula on Apple Silicon and Intel macOS.
+3. Open a pull request. The Formula workflow audits, installs and tests the formula on Apple Silicon macOS. Run it manually (workflow dispatch) to also cover Intel, where Homebrew no longer builds new bottles and ffmpeg compiles from source.
 
 ## License
 
